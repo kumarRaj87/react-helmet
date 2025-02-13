@@ -87,7 +87,7 @@ const Home = () => (
     <Meta 
       title="Home | My React App"
       description="Welcome to my React application's homepage"
-      image="/home.png"  // Note: Changed to .png for better Teams preview
+      image="/home.png"
       url="https://react-helmet-one.vercel.app/"
     />
     <h1>Home Page</h1>
