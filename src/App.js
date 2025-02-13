@@ -42,44 +42,35 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 // Meta component to handle head modifications
 const Meta = ({ title, description, image, url }) => {
-  // Get the current URL if not provided
   const currentUrl = url || window.location.href;
-  
+  const imageUrl = image.startsWith("http") ? image : `https://yourdomain.com${image}`;
+
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="icon" href={image} />
-      
-      {/* Microsoft Teams Meta Tags */}
-      <meta name="ms.prod" content="Microsoft Teams" />
-      <meta name="ms.sitename" content={title} />
-      <meta name="og:card" content="summary_large_image" />
-      <meta name="msapplication-TileImage" content={image} />
-      <meta name="msapplication-TileColor" content="#2B5797" />
-      
-      {/* Open Graph Meta Tags (Teams uses these) */}
+
+      {/* Open Graph Meta Tags */}
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={title} />
+      <meta property="og:site_name" content="My React App" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={imageUrl} />
       <meta property="og:url" content={currentUrl} />
       
-      {/* Additional image meta tags for better Teams preview */}
+      {/* Image Size for Open Graph (Mandatory for some platforms) */}
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={description} />
-      
-      {/* Twitter Card Meta Tags (Teams may fall back to these) */}
+
+      {/* Twitter Meta Tags (Optional) */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={imageUrl} />
     </Helmet>
   );
 };
+
 
 // Example pages with different meta data
 const Home = () => (
