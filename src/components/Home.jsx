@@ -3,12 +3,12 @@ import Meta from "./Meta"
 
 const Home = () => (
   <div>
-    {/* <Meta 
+    <Meta 
       title="Home | My React App"
       description="Welcome to the home page of my React App."
       image="https://react-helmet-one.vercel.app/home-image.png"
       url="https://react-helmet-one.vercel.app/"
-    /> */}
+    />
     <h1>Home Page</h1>
   </div>
 );

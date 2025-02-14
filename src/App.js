@@ -4,13 +4,11 @@ import { HelmetProvider } from "react-helmet-async";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Meta from "./components/Meta";
 
 const App = () => {
   return (
     <HelmetProvider>
       <Router>
-      <Meta/>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
