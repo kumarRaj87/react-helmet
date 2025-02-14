@@ -3,12 +3,12 @@ import Meta from "./Meta";
 
 const Contact = () => (
   <div>
-    <Meta 
+    {/* <Meta 
       title="Contact Us | My React App"
       description="Get in touch with us via this page."
       image="https://react-helmet-one.vercel.app/contact-image.png"
       url="https://react-helmet-one.vercel.app/contact"
-    />
+    /> */}
     <h1>Contact Page</h1>
   </div>
 );
