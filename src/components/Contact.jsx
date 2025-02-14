@@ -1,23 +1,16 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React from "react";
+import Meta from "../components/Meta";
 
-function Contact() {
-  useEffect(() => {
-    document.getElementById("favicon").href =
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDt3UtZX_rk0slCVjswq6dIS9aY-GDixb_hg&s";
-      document.getElementById("title").innerHTML= "Demo App - Contact";
-      document.getElementById("description").content = "This is the contact page of Demo App"
-  }, []);
-
-  return (
-    <div>
-      <Helmet>
-        <title>Demo App - Contact</title>
-        <meta name="description" content="This is the contact page of Demo App" />
-      </Helmet>
-      <h1>Contact Page</h1>
-    </div>
-  );
-}
+const Contact = () => (
+  <div>
+    <Meta 
+      title="Contact Us | My React App"
+      description="Get in touch with us via this page."
+      image="https://react-helmet-one.vercel.app/contact-image.png"
+      url="https://react-helmet-one.vercel.app/contact"
+    />
+    <h1>Contact Page</h1>
+  </div>
+);
 
 export default Contact;

@@ -1,23 +1,16 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React from "react";
+import Meta from "../components/Meta";
 
-function About() {
-  useEffect(() => {
-    document.getElementById("favicon").href =
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSitRR1YjtF86dsqjrS6mlhXp14y7R9Nk9LeQ&s";
-      document.getElementById("title").innerHTML= "Demo App - About";
-      document.getElementById("description").content = "This is the About page of Demo App"
-  }, []);
-
-  return (
-    <div>
-      <Helmet>
-        <title>Demo App - About</title>
-        <meta name="description" content="This is the about page of Demo App" />
-      </Helmet>
-      <h1>About Page</h1>
-    </div>
-  );
-}
+const About = () => (
+  <div>
+    <Meta 
+      title="About Us | My React App"
+      description="Learn more about us on this page."
+      image="https://react-helmet-one.vercel.app/about-image.png"
+      url="https://react-helmet-one.vercel.app/about"
+    />
+    <h1>About Page</h1>
+  </div>
+);
 
 export default About;
