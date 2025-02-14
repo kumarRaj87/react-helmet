@@ -12,7 +12,7 @@ const Meta = ({ title, description, image, url }) => {
 
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="My React App" />
+      {/* <meta property="og:site_name" content="My React App" /> */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={imageUrl} />
