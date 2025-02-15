@@ -1,27 +1,27 @@
-import React, { useEffect } from "react";
-import Meta from "./Meta";
+// import React, { useEffect } from "react";
+// import Meta from "./Meta";
 
-const Contact = () => 
-{
-  useEffect(() => {
-    document.getElementById("title")?.remove();
-    document.getElementById("description")?.remove();
-    document.getElementById("image")?.remove();
-  }, []);
-  return (
-  <div>
-    <Meta 
-      title="Contact Us | My React App"
-      description="Get in touch with us via this page."
-      image="https://react-helmet-one.vercel.app/contact-image.png"
-      url="https://react-helmet-one.vercel.app/contact"
-    />
-    <h1>Contact Page</h1>
-  </div>
-)
-  }
+// const Contact = () => 
+// {
+//   useEffect(() => {
+//     document.getElementById("title")?.remove();
+//     document.getElementById("description")?.remove();
+//     document.getElementById("image")?.remove();
+//   }, []);
+//   return (
+//   <div>
+//     <Meta 
+//       title="Contact Us | My React App"
+//       description="Get in touch with us via this page."
+//       image="https://react-helmet-one.vercel.app/contact-image.png"
+//       url="https://react-helmet-one.vercel.app/contact"
+//     />
+//     <h1>Contact Page</h1>
+//   </div>
+// )
+//   }
 
-export default Contact;
+// export default Contact;
 
 // import React, { useEffect } from "react";
 
@@ -41,4 +41,14 @@ export default Contact;
 // };
 
 // export default Contact;
+
+import React from 'react'
+
+const Contact = () => {
+  return (
+    <div>Contact</div>
+  )
+}
+
+export default Contact
 

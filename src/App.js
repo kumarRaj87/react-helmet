@@ -1,12 +1,13 @@
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
+import { AppLayout } from "./components/AppLayout";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <>
+    <AppLayout>
       <nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
@@ -18,7 +19,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </>
+    </AppLayout>
   );
 };
 
