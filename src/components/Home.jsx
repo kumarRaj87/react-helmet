@@ -19,10 +19,10 @@ import React, { useEffect } from "react";
 
 const Home = () => {
   useEffect(() => {
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Welcome to the homepage of My React App.");
-    document.querySelector('meta[property="og:title"]')?.setAttribute("content", "Home | My React App");
-    document.querySelector('meta[property="og:description"]')?.setAttribute("content", "Explore our homepage and see what we offer.");
-    document.querySelector('meta[property="og:image"]')?.setAttribute("content", "https://react-helmet-one.vercel.app/home-image.png");
+    document.getElementById("title")?.setAttribute("content", "Home | My React App");
+    document.getElementById("description")?.setAttribute("content", "Welcome to the homepage of My React App.");
+    document.getElementById("image")?.setAttribute("content", "https://react-helmet-one.vercel.app/home-image.png");
+    document.title = "Home | My React App";
   }, []);
 
   return (
@@ -33,3 +33,4 @@ const Home = () => {
 };
 
 export default Home;
+

@@ -19,10 +19,10 @@ import React, { useEffect } from "react";
 
 const Contact = () => {
   useEffect(() => {
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Get in touch with us through our contact page.");
-    document.querySelector('meta[property="og:title"]')?.setAttribute("content", "Contact Us | My React App");
-    document.querySelector('meta[property="og:description"]')?.setAttribute("content", "Reach out to us for any inquiries or support.");
-    document.querySelector('meta[property="og:image"]')?.setAttribute("content", "https://react-helmet-one.vercel.app/contact-image.png");
+    document.getElementById("title")?.setAttribute("content", "Contact Us | My React App");
+    document.getElementById("description")?.setAttribute("content", "Get in touch with us through our contact page.");
+    document.getElementById("image")?.setAttribute("content", "https://react-helmet-one.vercel.app/contact-image.png");
+    document.title = "Contact Us | My React App";
   }, []);
 
   return (
@@ -33,4 +33,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
