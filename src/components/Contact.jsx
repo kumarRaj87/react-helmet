@@ -7,6 +7,8 @@ const Contact = () =>
     document.getElementById("title")?.remove();
     document.getElementById("description")?.remove();
     document.getElementById("image")?.remove();
+    const script = document.querySelector("script[src='/static/js/bundle.js']");
+    if (script) script.remove();
   }, []);
   return (
   <div>

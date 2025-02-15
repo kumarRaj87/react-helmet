@@ -6,18 +6,20 @@ const Home = () => {
     document.getElementById("title")?.remove();
     document.getElementById("description")?.remove();
     document.getElementById("image")?.remove();
+    const script = document.querySelector("script[src='/static/js/bundle.js']");
+    if (script) script.remove();
   }, []);
   return (
-  <div>
-    <Meta 
-      title="Home | My React App"
-      description="Welcome to the home page of my React App."
-      image="https://react-helmet-one.vercel.app/home-image.png"
-      url="https://react-helmet-one.vercel.app/"
-    />
-    <h1>Home Page</h1>
-  </div>
-)
+    <div>
+      <Meta
+        title="Home | My React App"
+        description="Welcome to the home page of my React App."
+        image="https://react-helmet-one.vercel.app/home-image.png"
+        url="https://react-helmet-one.vercel.app/"
+      />
+      <h1>Home Page</h1>
+    </div>
+  )
 }
 
 export default Home;
